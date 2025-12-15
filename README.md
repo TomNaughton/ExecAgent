@@ -26,14 +26,12 @@ ExecAgent/
 │
 ├─ ExecAgent.sln              # Visual Studio solution
 ├─ ExecAgent.Core/            # Core library
-├─ ExecAgent.Console/         # Test console application
-├─ ExecAgent.Web/             # Future ASP.NET web UI
+├─ ExecAgent.TestApp/         # Test console application
 └─ .gitignore
 ```
 
 * **ExecAgent.Core**: The reusable library handling Docker exec commands and streaming output.
-* **ExecAgent.Console**: Example console client that demonstrates how to use the library.
-* **ExecAgent.Web**: Placeholder for future web GUI using SignalR for live streaming.
+* **ExecAgent.TestApp**: Example console client that demonstrates how to use the library.
 
 ---
 
@@ -55,7 +53,7 @@ docker pull alpine:latest
 docker run -d --name execagent-test alpine:latest tail -f /dev/null
 ```
 
-2. Update the container name in `ExecAgent.Console/Program.cs`:
+2. Update the container name in `ExecAgent.TestApp/Program.cs`:
 
 ```csharp
 string containerName = "execagent-test";
@@ -64,7 +62,7 @@ string containerName = "execagent-test";
 3. Run the console app:
 
 ```bash
-dotnet run --project ExecAgent.Console
+dotnet run --project ExecAgent.TestApp
 ```
 
 Expected output:
