@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ExecAgent.Core/ExecAgent.Core.csproj" />
+  <Project Path="ExecAgent.TestApp/ExecAgent.TestApp.csproj" />
+</Solution>
